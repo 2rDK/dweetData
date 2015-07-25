@@ -3,8 +3,8 @@ import requests
 from fcn.readSensors import readRPiCPUTemp
 from fcn.readCPULoad import readCPULoad
 
-myKey1 = "CPU_temp"
-myKey2 = "CPU_load"
+myKey1 = "RPi_CPU_temp"
+myKey2 = "RPi_CPU_load"
 myName = "HusetIO"
 dweetIO = "https://dweet.io/dweet/for/"
 

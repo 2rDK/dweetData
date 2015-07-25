@@ -15,7 +15,7 @@ def readRPiCPUTemp():
     try:
         proc = subprocess.Popen("/opt/vc/bin/vcgencmd measure_temp", stdout=subprocess.PIPE, shell=True)
         sensorsOutput = str(proc.stdout.read())
-        cputemp = float(sensorsOutput[5:9])
+        cputemp = float(sensorsOutput[7:11])
     except:
         print("Unexpected error:", sys.exc_info()[0])
         cputemp=-1
