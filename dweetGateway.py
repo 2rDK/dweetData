@@ -7,7 +7,7 @@ from readCPULoad import readCPULoad
 
 myKey1 = "CPU_temp"
 myKey2 = "CPU_load"
-myName = "HusetIO"
+myName = "HusetIO_gateway"
 dweetIO = "https://dweet.io/dweet/for/"
 
 temp = readSensors()

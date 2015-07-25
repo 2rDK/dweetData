@@ -1,19 +1,14 @@
 #!/usr/bin/python
-import requests
 from fcn.readSensors import readRPiCPUTemp
 from fcn.readCPULoad import readCPULoad
+from fcn.dweetTools import dweetSender
 
-myKey1 = "RPi_CPU_temp"
-myKey2 = "RPi_CPU_load"
-myName = "HusetIO"
-dweetIO = "https://dweet.io/dweet/for/"
+myKeys = {
+          'CPU_temp': readRPiCPUTemp(), 
+          'CPU_load': readCPULoad()
+          }
+myName = "HusetIO_RPi"
 
-temp = readRPiCPUTemp()
-loadCPU = readCPULoad()
-rqsString = dweetIO + myName + '?' + myKey1 + '=' + str(temp) + '&' + myKey2 + '=' + str(loadCPU)
+print(dweetSender(myName,myKeys))
 
-print(rqsString)
-
-rqs = requests.get(rqsString)
-
-print(rqs.status_code)
+#print(rqs.status_code)
