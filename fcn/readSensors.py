@@ -1,4 +1,5 @@
 import subprocess
+import sys
 def readFitPCCPUTemp():
     try:
         proc = subprocess.Popen("sensors -u coretemp-isa-0000", stdout=subprocess.PIPE, shell=True)
@@ -16,6 +17,7 @@ def readRPiCPUTemp():
         sensorsOutput = str(proc.stdout.read())
         cputemp = float(sensorsOutput[5:9])
     except:
+        print("Unexpected error:", sys.exc_info()[0])
         cputemp=-1
     
     return cputemp
