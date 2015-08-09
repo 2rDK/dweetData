@@ -9,7 +9,8 @@ obj = HTU21D()
 myKeys = {
           'CPU_temp': readRPiCPUTemp(), 
           'CPU_load': readCPULoad(),
-          'Loft_temp': obj.read_temperature()
+          'Loft_temp': round(obj.read_temperature(),2),
+          'Loft_hum': round(obj.read_humidity(),2)
           }
 
 myName = "HusetIO_RPi"
