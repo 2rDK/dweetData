@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from fcn.readSensors import readRPiCPUTemp
 from fcn.readCPULoad import readCPULoad
 from fcn.dweetTools import dweetSender
