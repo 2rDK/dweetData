@@ -2,13 +2,18 @@
 from fcn.readSensors import readRPiCPUTemp
 from fcn.readCPULoad import readCPULoad
 from fcn.dweetTools import dweetSender
+from fcn.mySqlTools import mySqlSender
+
 
 myKeys = {
           'CPU_temp': readRPiCPUTemp(), 
           'CPU_load': readCPULoad()
           }
+
 myName = "HusetIO_RPi"
 
 print(dweetSender(myName,myKeys))
 
-#print(rqs.status_code)
+mySqlSender("CPU_temp",15,1)
+
+    
