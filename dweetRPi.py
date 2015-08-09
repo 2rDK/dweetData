@@ -4,7 +4,7 @@ sys.path.insert(0,"/home/pi/Documents/dweetData-master/fcn")
 from fcn.readSensors import readRPiCPUTemp
 from fcn.readCPULoad import readCPULoad
 from fcn.dweetTools import dweetSender
-#from fcn.mySqlTools import mySqlSender
+from fcn.mySqlTools import mySqlSenderAnalog
 from fcn.HTU21D import HTU21D
 
 obj = HTU21D()
@@ -18,6 +18,10 @@ myKeys = {
 myName = "HusetIO_RPi"
 
 print(dweetSender(myName,myKeys))
+
+myUnit = 1;
+
+mySqlSenderAnalog(myKeys,myUnit)
 
 #mySqlSender("CPU_temp",15,1)
 
