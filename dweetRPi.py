@@ -5,11 +5,11 @@ from fcn.dweetTools import dweetSender
 #from fcn.mySqlTools import mySqlSender
 from fcn.HTU21D import HTU21D
 
-
+obj = HTU21D()
 myKeys = {
           'CPU_temp': readRPiCPUTemp(), 
           'CPU_load': readCPULoad(),
-          'Loft_temp': HTU21D.read_temperature()
+          'Loft_temp': obj.read_temperature()
           }
 
 myName = "HusetIO_RPi"
