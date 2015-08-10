@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-sys.path.insert(0,"/home/pi/Documents/dweetData-master/fcn")
+sys.path.insert(0,"/home/pi/Documents/dweetData/fcn")
 from fcn.readSensors import readRPiCPUTemp
 from fcn.readCPULoad import readCPULoad
 from fcn.dweetTools import dweetSender
